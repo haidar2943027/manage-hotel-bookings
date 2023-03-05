@@ -5,11 +5,12 @@ const Vision = require('@hapi/vision');
 const routes = require('./routes/bookings');
 const mongoose = require('mongoose');
 const hotel = require('./models/hotel.model');
+const { MongoClient, ServerApiVersion } = require('mongodb');
 async function connectToDB() {
     try {
-    //   Locale await mongoose.connect('mongodb://localhost/hotel-bookings', { useNewUrlParser: true });
-    await mongoose.connect('mongodb+srv://rrZx9ZcsHTkKNSm6:rrZx9ZcsHTkKNSm6@cluster0.te34tzy.mongodb.net/test', { useNewUrlParser: true});
-    console.log('Connected to Database');
+        // await mongoose.connect('mongodb://localhost/hotel-bookings', { useNewUrlParser: true });
+        await mongoose.connect('mongodb+srv://haidarali030492:GvNPUFleVOkquf7p@cluster0.te34tzy.mongodb.net/booking', { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1});
+        console.log('Connected to Database');
     } catch (error) {
       console.log(error);
     }
@@ -17,7 +18,7 @@ async function connectToDB() {
 async function init() {
 
     const server = Hapi.server({
-        port: process.env.PORT || 3000,
+        port: process.env.PORT || 5000,
         host: 'localhost'
     });
     await connectToDB();

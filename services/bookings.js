@@ -17,14 +17,11 @@ class BookingsService {
             return { message: err.message, statusCode: 400 };
         }
     }
-
     async getHotels(params) {
         try {
             // Get hotels list with date filter
-            console.log('parm===', params)
             let startDate = params["fromDate"]
             let endDate = params["toDate"]
-            console.log("startDate", startDate)
             let match = [
                 {
                   $match: {
