@@ -1,0 +1,27 @@
+{
+  "name": "task_3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/hapi": "^21.3.0",
+    "@hapi/inert": "^7.0.1",
+    "@hapi/vision": "^7.0.1",
+    "chai": "^4.3.7",
+    "chai-as-promised": "^7.1.1",
+    "chai-http": "^4.3.0",
+    "hapi-swagger": "^16.0.1",
+    "joi": "^17.8.3",
+    "mocha": "^10.2.0",
+    "mongoose": "^7.0.0",
+    "sinon": "^15.0.1"
+  },
+  "devDependencies": {
+    "jest": "^29.4.3"
+  }
+}
